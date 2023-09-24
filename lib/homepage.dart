@@ -6,32 +6,39 @@ class Homepage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.indigo,
-      child: Column(
-        children: [
-          Row(
-            children: [Text('Enter your name')],
+    return Scaffold(
+        appBar: AppBar(
+          title: Text(
+            'Login',
+            style: TextStyle(fontSize: 25),
           ),
-          Row(
+        ),
+        body: Container(
+          color: Colors.indigo,
+          child: Column(
             children: [
-              TextField(
-                decoration: InputDecoration(hintText: ""),
+              Row(
+                children: [Text('Enter your name')],
+              ),
+              Row(
+                children: [
+                  TextField(
+                    decoration: InputDecoration(hintText: ""),
+                  )
+                ],
+              ),
+              Row(
+                children: [Text('Enter your pass')],
+              ),
+              Row(
+                children: [
+                  TextField(
+                    decoration: InputDecoration(hintText: ""),
+                  )
+                ],
               )
             ],
           ),
-          Row(
-            children: [Text('Enter your pass')],
-          ),
-          Row(
-            children: [
-              TextField(
-                decoration: InputDecoration(hintText: ""),
-              )
-            ],
-          )
-        ],
-      ),
-    );
+        ));
   }
 }
